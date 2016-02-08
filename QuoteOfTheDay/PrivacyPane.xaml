@@ -1,0 +1,105 @@
+﻿<UserControl
+    x:Class="QuoteOfTheDay.PrivacyPane"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:QuoteOfTheDay"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Border BorderBrush="Black" BorderThickness="1,0,0,0">
+        <Grid Background="White" VerticalAlignment="Stretch">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!-- HEADER -->
+            <Grid Grid.Row="0">
+                <Grid>
+                    <Grid.Transitions>
+                        <TransitionCollection>
+                            <EntranceThemeTransition FromHorizontalOffset="50" />
+                        </TransitionCollection>
+                    </Grid.Transitions>
+
+                    <StackPanel Orientation="Horizontal" Grid.Column="0" Margin="40, 32, 17, 13">
+                        <Button 
+                            x:Name="BackButton" 
+                            Margin="0,3,0,0" 
+                            Style="{StaticResource BackButtonStyle}" 
+                            Click="BackButton_Click"/>
+                        <TextBlock 
+                            Margin="10,10,0,0" 
+                            FontFamily="Segoe UI" 
+                            FontWeight="SemiLight" 
+                            FontSize="24.6667" 
+                            Text="Privacy Policy"/>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+
+            <!-- CONTENT AREA -->
+            <Grid Margin="40,30,25,10" VerticalAlignment="Top" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.Transitions>
+                    <TransitionCollection>
+                        <EntranceThemeTransition FromHorizontalOffset="120" />
+                    </TransitionCollection>
+                </Grid.Transitions>
+
+                <TextBlock Grid.Row="0"
+                    TextWrapping="Wrap" 
+                    Style="{StaticResource SubtitleTextStyle}">
+                    <Bold>1. Data collected:</Bold>
+                </TextBlock>
+                <TextBlock Grid.Row="1"
+                    TextWrapping="Wrap" 
+                    Style="{StaticResource SubtitleTextStyle}">
+                    This application does not gather any information about you.
+                </TextBlock>
+                <TextBlock Grid.Row="2"
+                    TextWrapping="Wrap" 
+                    Style="{StaticResource SubtitleTextStyle}">
+                    <Bold>2. Protecting data:</Bold>
+                </TextBlock>
+                <TextBlock Grid.Row="3"
+                    TextWrapping="Wrap" 
+                    Style="{StaticResource SubtitleTextStyle}">
+                    This application does not collect or store any information.
+                </TextBlock>
+                <TextBlock Grid.Row="4"
+                    TextWrapping="Wrap" 
+                    Style="{StaticResource SubtitleTextStyle}">
+                    <Bold>3. Contacting you:</Bold>
+                </TextBlock>
+                <TextBlock Grid.Row="5"
+                    TextWrapping="Wrap" 
+                    Style="{StaticResource SubtitleTextStyle}">
+                    If you asked me a question, I may contact you by e-mail in order to answer it.
+                </TextBlock>
+                <TextBlock Grid.Row="6"
+                    TextWrapping="Wrap" 
+                    Style="{StaticResource SubtitleTextStyle}">
+                    <Bold>4. Contact:</Bold>
+                </TextBlock>
+                <TextBlock Grid.Row="7"
+                    TextWrapping="Wrap" 
+                    Style="{StaticResource SubtitleTextStyle}">
+                    If you have additional questions about this Privacy Policy, please contact me at: radu.ungureanu1912@cti.pub.ro
+                </TextBlock>
+            </Grid>
+        </Grid>
+    </Border>
+</UserControl>
